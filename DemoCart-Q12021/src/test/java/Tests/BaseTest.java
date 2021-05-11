@@ -33,7 +33,7 @@ public class BaseTest {
         if (browser.equals("chrome")){
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--screenshot ");
+            //options.addArguments("--headless");
             driver = new ChromeDriver(options);
         }else {
         WebDriverManager.firefoxdriver().setup();

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class CartTests extends BaseTest{
 
-    @Test
+    @Test(groups = {"sanity"})
     public void AddProductToCart() throws InterruptedException {
         HomePage home = new HomePage(driver);
         SearchResultsPage searchResults = new SearchResultsPage(driver);

@@ -25,5 +25,9 @@ public class dashboardPage extends BasePage{
         return driver.findElement(By.xpath("//ul//li//h2"));
     }
 
+    public WebElement setDashboardRegisterSuccess() {
+        return driver.findElement(By.id("common-success"));
+    }
+
 
 }
