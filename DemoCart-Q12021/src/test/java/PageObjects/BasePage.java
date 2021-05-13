@@ -23,6 +23,10 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+    public void waitUntilElementDataExists(WebElement element, String data) {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.attributeContains(element, element.getText(), data));
+    }
 
     public void implicitWait(int time) {
         driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);

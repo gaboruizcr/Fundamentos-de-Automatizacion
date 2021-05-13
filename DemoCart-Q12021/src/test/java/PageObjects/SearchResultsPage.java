@@ -1,9 +1,6 @@
 package PageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 public class SearchResultsPage extends BasePage {
 
@@ -12,8 +9,16 @@ public class SearchResultsPage extends BasePage {
     private WebElement setAddToCartButton() {
         return driver.findElement(By.xpath("//div[@class='button-group']//button[@type='button']//i[@class='fa fa-shopping-cart']"));
     }
+    private WebElement setShoppingCartButton(){
+        return driver.findElement(By.xpath("//a[@title='Shopping Cart']"));
+    }
 
     public void addToCart(){
-        this.setAddToCartButton().click();
+       this.setAddToCartButton().click();
     }
+    public void goToShoppingCart(){
+        this.setShoppingCartButton().click();
+    }
+
+
 }

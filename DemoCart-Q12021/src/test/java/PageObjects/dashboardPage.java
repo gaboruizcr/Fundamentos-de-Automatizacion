@@ -17,8 +17,8 @@ public class dashboardPage extends BasePage{
         return driver.findElement(By.id("account-account"));
     }
 
-    public WebElement setDashboardItemAdded(){
-        return driver.findElement(By.id("cart-total"));
+    public WebElement getDashboardCheckout(){
+        return driver.findElement(By.xpath("//a[@class='btn btn-primary']"));
     }
 
     public WebElement setDashboardCurrency(){
@@ -29,5 +29,8 @@ public class dashboardPage extends BasePage{
         return driver.findElement(By.id("common-success"));
     }
 
+    public WebElement getSuccess(){
+        return driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']"));
+    }
 
 }
